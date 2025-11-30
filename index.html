@@ -71,6 +71,9 @@
         .chevron.rotated {
             transform: rotate(90deg);
         }
+		.small-text {
+  font-size: 14px;
+}
     </style>
 </head>
 <body>
@@ -185,7 +188,7 @@
                 name: 'Inbound Logistics',
                 icon: '📦',
                 description: 'Raw material procurement and quality testing',
-                components: ['Solar panels from Tata Power', 'Sensors from Keyence', 'Steel from Jindal', 'Quality database'],
+                components: ['Solar panels/batteries from Tata Power/Solar Systems Ltd.', 'Sensors from Keyence/Omega', 'Steel & Compaction Unit from Jindal', 'Whillie Bins & Other Components'],
                 sap: ['SAP IM', 'SAP QM']
             },
             {
@@ -193,7 +196,7 @@
                 name: 'Operations',
                 icon: '⚙️',
                 description: 'Manufacturing and testing of SPDD',
-                components: ['Assembly by engineers', 'Testing finished products', 'Waste minimization', 'Quality assurance'],
+                components: ['Assembly of SPDD', 'Testing Final Products'],
                 sap: ['SAP PP', 'SAP QM']
             },
             {
@@ -201,7 +204,7 @@
                 name: 'Outbound Logistics',
                 icon: '🚚',
                 description: 'Direct delivery and installation',
-                components: ['Company drivers', 'Direct delivery', 'Professional installation', 'No third parties'],
+                components: ['Company Drivers', 'Direct Delivery', 'Proper Installation', 'No Third Parties'],
                 sap: ['SAP SCM', 'SAP SD']
             },
             {
@@ -209,7 +212,7 @@
                 name: 'Marketing & Sales',
                 icon: '📢',
                 description: 'Product promotion and sales',
-                components: ['Sustainability messaging', 'Smart city partnerships', 'B2G and B2B sales', 'Market expansion'],
+                components: ['Advertising Sustainability'],
                 sap: ['SAP CRM', 'SAP SD']
             },
             {
@@ -217,7 +220,7 @@
                 name: 'Service',
                 icon: '🛠️',
                 description: 'Customer support and maintenance',
-                components: ['Customer care team', 'Quick response', 'Warranty management', 'Product replacement'],
+                components: ['Customer Care Team', 'Quick Response', 'Warranty', 'Product Replacement'],
                 sap: ['SAP PM', 'SAP CRM']
             }
         ];
@@ -248,25 +251,31 @@
                 <div class="space-y-6">
                     <div class="bg-white rounded-2xl shadow-xl p-8">
                         <h2 class="text-2xl font-bold mb-4 text-gray-800">Project Overview</h2>
+						<p class="small-text" style="margin-bottom: 15px;">Rottbrun uses a differentiation-focus strategy. According to five porter strategies, Rottbrun competition is minimal. There is limited supplier negotiation power, as well as limited buyer power, and substitutes are also weak. 
+					</p>
                         <div class="grid md:grid-cols-2 gap-6">
                             <div>
                                 <h3 class="font-semibold text-lg mb-3 text-green-600">Key Features</h3>
                                 <ul class="space-y-2">
                                     <li class="flex items-start gap-2 text-sm">
                                         <span class="text-green-500 mt-0.5">✓</span>
-                                        <span>Compacts waste automatically using sensors</span>
+                                        <span>Runs on solar panels & batteries that lasts 2 to 3 days.</span>
+                                    </li>
+									<li class="flex items-start gap-2 text-sm">
+                                        <span class="text-green-500 mt-0.5">✓</span>
+                                        <span>Uses sensors to detect levels and compress waste automatically</span>
                                     </li>
                                     <li class="flex items-start gap-2 text-sm">
                                         <span class="text-green-500 mt-0.5">✓</span>
-                                        <span>Solar-powered with 2-3 day battery life</span>
+                                        <span>Sends real-times wireless updates to waste collectors</span>
                                     </li>
                                     <li class="flex items-start gap-2 text-sm">
                                         <span class="text-green-500 mt-0.5">✓</span>
-                                        <span>Real-time wireless communication with collectors</span>
+                                        <span>Provides route optimization and waste level prediction through an app</span>
                                     </li>
                                     <li class="flex items-start gap-2 text-sm">
                                         <span class="text-green-500 mt-0.5">✓</span>
-                                        <span>Predictive analytics for route optimization</span>
+                                        <span>Reduces unnecessary checks, cuts operational costs, and improves efficiency</span>
                                     </li>
                                 </ul>
                             </div>
@@ -275,14 +284,14 @@
                                 <div class="space-y-3">
                                     <div class="bg-blue-50 p-3 rounded-lg">
                                         <p class="font-semibold text-sm text-blue-800">Primary</p>
-                                        <p class="text-xs text-blue-600">Municipal governments & waste collection orgs</p>
+                                        <p class="text-xs text-blue-600">Government & Municipal Waste Departments</p>
                                     </div>
                                     <div class="bg-blue-50 p-3 rounded-lg">
-                                        <p class="font-semibold text-sm text-blue-800">Secondary</p>
+                                        <p class="font-semibold text-sm text-blue-800">Secondary (Commercial users)</p>
                                         <p class="text-xs text-blue-600">Malls, offices, convention centers</p>
                                     </div>
                                     <div class="bg-blue-50 p-3 rounded-lg">
-                                        <p class="font-semibold text-sm text-blue-800">Tertiary</p>
+                                        <p class="font-semibold text-sm text-blue-800">Secondary (Private users)</p>
                                         <p class="text-xs text-blue-600">Households, schools, hospitals</p>
                                     </div>
                                 </div>
@@ -291,15 +300,14 @@
                     </div>
 
                     <div class="bg-white rounded-2xl shadow-xl p-8">
-                        <h2 class="text-2xl font-bold mb-4 text-gray-800">Key Suppliers & Components</h2>
+                        <h2 class="text-2xl font-bold mb-4 text-gray-800">Suppliers & Components</h2>
                         <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
                             ${[
-                                { name: 'Solar Panel', supplier: 'Tata Power', spec: '50W synthesized' },
+                                { name: 'Solar Panel & Battery', supplier: 'Tata Power/Solar Systems Ltd.', spec: '50W - Better rate if bought together' },
                                 { name: 'Sensors', supplier: 'Keyence/Omega', spec: 'Load level monitoring' },
-                                { name: 'Steel Body', supplier: 'Jindal Stainless', spec: 'Superior durability' },
-                                { name: 'Battery', supplier: 'Tata Power', spec: '3-day capacity' },
+                                { name: 'Steel & Compaction Unit', supplier: 'Jindal Stainless', spec: 'Superior durability - Leading Manufacturer' },
                                 { name: 'Wheelie Bins', supplier: 'Green-revolution', spec: 'Partner company' },
-                                { name: 'GSM Module', supplier: 'Various', spec: 'Wireless communication' }
+                                { name: 'LED, Rasberry, GSM', supplier: 'Arihantledlights', spec: 'Wireless communication' }
                             ].map(item => `
                                 <div class="bg-gradient-to-br from-green-50 to-blue-50 p-4 rounded-lg border border-gray-200">
                                     <p class="font-semibold text-sm text-gray-800">${item.name}</p>
@@ -514,21 +522,21 @@
                         <!-- Header -->
                         <div class="bg-white rounded-2xl shadow-xl p-8 mb-6">
                             <div class="flex items-center gap-4 mb-4">
-                                <div class="bg-green-500 p-3 rounded-xl text-white text-3xl">⚡</div>
+                                <div class="bg-green-500 p-3 rounded-xl text-white text-3xl">🗑️</div>
                                 <div>
-                                    <h1 class="text-4xl font-bold text-gray-800">SPDD Project Explorer</h1>
-                                    <p class="text-gray-600">Solar Power Driven Dustbin - Interactive MIS Guide</p>
+                                    <h1 class="text-4xl font-bold text-gray-800">SPDD Project Submitted to Mr. Shahzad Khan</h1>
+                                    <p class="text-gray-600">Submitted by Fatima Nadeem (02), Mian Muhammad Hassnain (153), Amna Nadeem (20), Fatina Fayyaz (52), Hiba Yasir (10)</p>
                                 </div>
                             </div>
                             
                             <div class="grid grid-cols-3 gap-4 mt-6">
                                 <div class="bg-green-100 p-4 rounded-xl">
                                     <p class="text-sm text-green-700 font-semibold">Vision</p>
-                                    <p class="text-xs text-green-600 mt-1">Sustainable waste management for smart cities</p>
+                                    <p class="text-xs text-green-600 mt-1">Become the backbone of sustainable waste management by reaching every part of the city around the nation.</p>
                                 </div>
                                 <div class="bg-blue-100 p-4 rounded-xl">
                                     <p class="text-sm text-blue-700 font-semibold">Problem</p>
-                                    <p class="text-xs text-blue-600 mt-1">Only 40% of India's waste is collected properly</p>
+                                    <p class="text-xs text-blue-600 mt-1">Poor waste management in developing countries. In India, only 40% of daily waste is collected.</p>
                                 </div>
                                 <div class="bg-purple-100 p-4 rounded-xl">
                                     <p class="text-sm text-purple-700 font-semibold">Solution</p>
@@ -545,7 +553,7 @@
                                     ${tab === 'overview' ? '📊 Overview' : ''}
                                     ${tab === 'sap' ? '💼 SAP Modules' : ''}
                                     ${tab === 'valuechain' ? '🔗 Value Chain' : ''}
-                                    ${tab === 'disruptions' ? '⚠️ Risk Management' : ''}
+                                    ${tab === 'disruptions' ? '⚠️ Disruptive Risk Management' : ''}
                                 </button>
                             `).join('')}
                         </div>
